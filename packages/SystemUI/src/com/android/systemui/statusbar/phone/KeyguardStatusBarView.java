@@ -24,6 +24,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -71,6 +72,8 @@ public class KeyguardStatusBarView extends RelativeLayout
     private static final int LAYOUT_NONE = 0;
     private static final int LAYOUT_CUTOUT = 1;
     private static final int LAYOUT_NO_CUTOUT = 2;
+
+    private static final String FONT_FAMILY = "sans-serif";
 
     private boolean mBatteryCharging;
     private boolean mKeyguardUserSwitcherShowing;
@@ -162,6 +165,9 @@ public class KeyguardStatusBarView extends RelativeLayout
                 mSystemIconsContainer.getPaddingTop(),
                 getResources().getDimensionPixelSize(R.dimen.system_icons_keyguard_padding_end),
                 mSystemIconsContainer.getPaddingBottom());
+
+        Typeface tf = Typeface.create(FONT_FAMILY, Typeface.NORMAL);
+        mCarrierLabel.setTypeface(tf);
 
         // Respect font size setting.
         mCarrierLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX,

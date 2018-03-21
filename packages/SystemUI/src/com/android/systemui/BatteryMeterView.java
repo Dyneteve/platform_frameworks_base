@@ -27,6 +27,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.ContentObserver;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Handler;
 import android.provider.Settings;
@@ -66,6 +67,7 @@ public class BatteryMeterView extends LinearLayout implements
     private ImageView mBatteryIconView;
     private final CurrentUserTracker mUserTracker;
     private TextView mBatteryPercentView;
+    private static final String FONT_FAMILY = "sans-serif-medium";
     private String mBatteryEstimate = null;
 
     private BatteryController mBatteryController;
@@ -314,6 +316,7 @@ public class BatteryMeterView extends LinearLayout implements
     }
 
     private void setPercentTextAtCurrentLevel() {
+        Typeface tf = Typeface.create(FONT_FAMILY, Typeface.NORMAL);
         // Use the high voltage symbol ⚡ (u26A1 unicode) but prevent the system
         // to load its emoji colored variant with the uFE0E flag
         String bolt = "\u26A1\uFE0E";
@@ -322,6 +325,7 @@ public class BatteryMeterView extends LinearLayout implements
                 ? (bolt + " ") : "";
         mBatteryPercentView.setText(mChargeIndicator +
                 NumberFormat.getPercentInstance().format(mLevel / 100f));
+        mBatteryPercentView.setTypeface(tf);
     }
 
     private void updateShowPercent() {

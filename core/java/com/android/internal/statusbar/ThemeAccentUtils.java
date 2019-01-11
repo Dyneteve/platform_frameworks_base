@@ -118,6 +118,7 @@ public class ThemeAccentUtils {
         "com.android.systemui.qstile.dottedcircle", // 12
         "com.android.systemui.qstile.shishuink", // 13
         "com.android.systemui.qstile.attemptmountain", // 14
+        "com.android.systemui.qstile.cookie", // 15
     };
 
     // Unloads the stock dark theme

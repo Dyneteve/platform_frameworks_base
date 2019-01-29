@@ -74,6 +74,7 @@
     <dimen name="opa_line_y_translation">16.0dip</dimen>
 
     <!-- OmniStyle -->
-    <dimen name="qs_header_image_offset">0dp</dimen>
-    <dimen name="qs_header_image_side_margin">0dp</dimen>
+    <dimen name="qs_header_image_offset">25dp</dimen>
+    <dimen name="qs_header_image_side_margin">4dp</dimen>
+    <dimen name="qs_header_image_bottom_margin">4dp</dimen>
 </resources>

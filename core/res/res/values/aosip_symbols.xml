@@ -204,4 +204,9 @@
 
   <!-- Custom accent color -->
   <java-symbol type="color" name="custom_accent_color" />
+
+  <!-- Weather default unit
+       0 - Celsius
+       1 - Fahrenheit -->
+  <java-symbol type="integer" name="weather_lockscreen_default_unit" />
 </resources>

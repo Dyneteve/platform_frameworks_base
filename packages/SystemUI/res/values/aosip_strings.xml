@@ -293,4 +293,7 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
 
+    <!-- Font Tile -->
+    <string name="quick_settings_font_label">Fonts</string>
+    <string name="quick_settings_font_detail_label">Select a font</string>
 </resources>

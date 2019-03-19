@@ -1541,4 +1541,11 @@ interface ITelephony {
      * @hide
      */
 	 void toggle2G(boolean on);
+	 
+    /**
+     * Toggle between 3G and 2G (NT_MODE_WCDMA_PREF, NT_MODE_GSM)
+     * @param boolean to turn on and off 3G
+     * @hide
+     */
+	 void toggle3G(boolean on);
 }

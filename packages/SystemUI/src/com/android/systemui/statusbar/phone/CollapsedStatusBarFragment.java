@@ -638,6 +638,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             case 38:
                 logo = getContext().getResources().getDrawable(R.drawable.status_bar_themeicon03);
                 break;
+            case 39:
+                logo = getContext().getResources().getDrawable(R.drawable.status_bar_deathstar);
+                break;
                 // Default Kronic HOME logo, once again
             default:
                 logo = getContext().getResources().getDrawable(R.drawable.ic_status_bar_kronic_logo);

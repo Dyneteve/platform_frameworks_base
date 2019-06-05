@@ -146,6 +146,12 @@
       <item>com.snapchat.android</item>
       <item>com.google.android.gms</item>
       <item>com.spotify.music</item>
+	  <item>com.facebook.orca</item>
+	  <item>com.facebook.mlite</item>
+	  <item>com.facebook.katana</item>
+	  <item>com.facebook.lite</item>
+	  <item>com.Slack</item>
+	  
 	</string-array>
 
     <!-- Whether the device supports Smart Pixels -->

@@ -4992,7 +4992,13 @@ public final class Settings {
 
         /** @hide */
         private static final Validator LOCK_HIDE_STATUS_BAR_VALIDATOR =
-               BOOLEAN_VALIDATOR;  
+               BOOLEAN_VALIDATOR;
+
+        /**
+         * Show lockscreen icon
+         * @hide
+         */   
+        public static final String SHOW_LOCKSCREEN_ICON = "show_lockscreen_icon";
 
         /**
          * Change quick settings tiles animation style
@@ -5960,6 +5966,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(STATUS_BAR_CUSTOM_HEADER_IMAGE);
             PRIVATE_SETTINGS.add(STATUS_BAR_FILE_HEADER_IMAGE);
             PRIVATE_SETTINGS.add(LOCK_HIDE_STATUS_BAR);
+            PRIVATE_SETTINGS.add(SHOW_LOCKSCREEN_ICON);
 
             // Pocket mode handler.
             PRIVATE_SETTINGS.add(POCKET_JUDGE);

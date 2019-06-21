@@ -50,6 +50,7 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.service.media.CameraPrewarmService;
 import android.telecom.TelecomManager;
 import android.text.TextUtils;
@@ -180,6 +181,7 @@ public class KeyguardBottomAreaView extends FrameLayout implements View.OnClickL
     private int mBurnInXOffset;
     private int mBurnInYOffset;
 
+    private boolean mShowIndicator = true;
     private boolean mShowLockicon;
 
     public KeyguardBottomAreaView(Context context) {
@@ -910,8 +912,11 @@ public class KeyguardBottomAreaView extends FrameLayout implements View.OnClickL
     }
 
     public void onKeyguardShowingChanged() {
+		mShowIndicator = Settings.System.getIntForUser(mContext.getContentResolver(),
+        Settings.System.SHOW_LOCKSCREEN_INDICATOR_DISPLAY, 1, UserHandle.USER_CURRENT) == 1;
         updateLeftAffordance();
         inflateCameraPreview();
+        mIndicationController.setVisibleOverwrite(mShowIndicator);
     }
 
     private void setRightButton(IntentButton button) {

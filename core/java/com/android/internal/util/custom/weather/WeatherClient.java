@@ -62,7 +62,7 @@ public class WeatherClient {
 
     private boolean mBootAndUnlockDone;
 
-    private static final int WEATHER_UPDATE_INTERVAL = 60 * 20 * 1000; // 20 minutes
+    private static final int WEATHER_UPDATE_INTERVAL = 60 * 10 * 1000; // 10 minutes
     private String updateIntentAction;
     private PendingIntent pendingWeatherUpdate;
     private WeatherInfo mWeatherInfo = new WeatherInfo();
@@ -113,6 +113,18 @@ public class WeatherClient {
         // check if this is a SystemUI restart and boot was already completed
         if ("1".equals(SystemProperties.get("sys.boot_completed"))) {
             mBootAndUnlockDone = true;
+        }
+    }
+
+    public static boolean isAvailable(Context context) {
+        final PackageManager pm = context.getPackageManager();
+        try {
+            pm.getPackageInfo(SERVICE_PACKAGE, PackageManager.GET_ACTIVITIES);
+            int enabled = pm.getApplicationEnabledSetting(SERVICE_PACKAGE);
+            return enabled != PackageManager.COMPONENT_ENABLED_STATE_DISABLED &&
+                    enabled != PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
         }
     }
 
@@ -307,8 +319,9 @@ public class WeatherClient {
         }
 
         public int getWeatherConditionImage() {
-            if (conditionsToDrawableMap.containsKey(conditions))
+            if (conditionsToDrawableMap.containsKey(conditions)){
                 return conditionsToDrawableMap.get(conditions);
+            }
             return 0;
         }
 

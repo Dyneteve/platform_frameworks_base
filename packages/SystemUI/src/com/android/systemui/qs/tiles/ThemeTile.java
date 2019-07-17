@@ -97,24 +97,18 @@ public class ThemeTile extends QSTileImpl<BooleanState> {
                 R.string.quick_settings_theme_tile_color_grey));
         sThemeItems.add(new ThemeTileItem(19, R.color.quick_settings_theme_tile_blue_grey,
                 R.string.quick_settings_theme_tile_color_blue_grey));
-        sThemeItems.add(new ThemeTileItem(22, R.color.quick_settings_theme_tile_user_one,
-                R.string.quick_settings_theme_tile_color_user_one));
-        sThemeItems.add(new ThemeTileItem(23, R.color.quick_settings_theme_tile_user_two,
-                R.string.quick_settings_theme_tile_color_user_two));
-        sThemeItems.add(new ThemeTileItem(24, R.color.quick_settings_theme_tile_user_three,
-                R.string.quick_settings_theme_tile_color_user_three));
-        sThemeItems.add(new ThemeTileItem(25, R.color.quick_settings_theme_tile_user_four,
-                R.string.quick_settings_theme_tile_color_user_four));
-        sThemeItems.add(new ThemeTileItem(26, R.color.quick_settings_theme_tile_user_five,
-                R.string.quick_settings_theme_tile_color_user_five));
-        sThemeItems.add(new ThemeTileItem(27, R.color.quick_settings_theme_tile_user_six,
-                R.string.quick_settings_theme_tile_color_user_six));
-        sThemeItems.add(new ThemeTileItem(28, R.color.quick_settings_theme_tile_user_seven,
-                R.string.quick_settings_theme_tile_color_user_seven));
-        sThemeItems.add(new ThemeTileItem(29, R.color.quick_settings_theme_tile_user_eight,
-                R.string.quick_settings_theme_tile_color_user_eight));
-        sThemeItems.add(new ThemeTileItem(30, R.color.quick_settings_theme_tile_user_nine,
-                R.string.quick_settings_theme_tile_color_user_nine));
+        sThemeItems.add(new ThemeTileItem(22, R.color.quick_settings_theme_tile_q_one,
+                R.string.quick_settings_theme_tile_color_q_one));
+        sThemeItems.add(new ThemeTileItem(23, R.color.quick_settings_theme_tile_q_two,
+                R.string.quick_settings_theme_tile_color_q_two));
+        sThemeItems.add(new ThemeTileItem(24, R.color.quick_settings_theme_tile_q_three,
+                R.string.quick_settings_theme_tile_color_q_three));
+        sThemeItems.add(new ThemeTileItem(25, R.color.quick_settings_theme_tile_q_four,
+                R.string.quick_settings_theme_tile_color_q_four));
+        sThemeItems.add(new ThemeTileItem(26, R.color.quick_settings_theme_tile_q_five,
+                R.string.quick_settings_theme_tile_color_q_five));
+        sThemeItems.add(new ThemeTileItem(27, R.color.quick_settings_theme_tile_q_six,
+                R.string.quick_settings_theme_tile_color_q_six));
     }
 
     static final List<ThemeTileItem> sStyleItems = new ArrayList<ThemeTileItem>();

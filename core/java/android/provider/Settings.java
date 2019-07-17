@@ -4831,7 +4831,7 @@ public final class Settings {
         public static final String ACCENT_PICKER = "accent_picker";
         /** @hide */
         public static final Validator ACCENT_PICKER_VALIDATOR =
-                new SettingsValidators.InclusiveIntegerRangeValidator(0, 30);
+                new SettingsValidators.InclusiveIntegerRangeValidator(0, 27);
 
         /**
          * Whether to use blackaf themes in place of dark

@@ -91,15 +91,12 @@ public class ThemeAccentUtils {
         "com.accents.bluegrey", // 19
         "com.accents.black", // 20
         "com.accents.white", // 21
-        "com.accents.userone", // 22
-        "com.accents.usertwo", // 23
-        "com.accents.userthree", // 24
-        "com.accents.userfour", // 25
-        "com.accents.userfive", // 26
-        "com.accents.usersix", // 27
-        "com.accents.userseven", // 28
-        "com.accents.usereight", // 29
-        "com.accents.usernine", // 30
+        "com.accents.qone", // 22
+        "com.accents.qtwo", // 23
+        "com.accents.qthree", // 24
+        "com.accents.qfour", // 25
+        "com.accents.qfive", // 26
+        "com.accents.qsix", // 27
     };
 
     private static final String[] QS_TILE_THEMES = {

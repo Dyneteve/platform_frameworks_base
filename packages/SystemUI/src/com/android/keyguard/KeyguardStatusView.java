@@ -492,13 +492,22 @@ public class KeyguardStatusView extends GridLayout implements
             final ContentResolver resolver = mContext.getContentResolver();
             boolean mClockSelection = Settings.System.getIntForUser(resolver,
                     Settings.System.LOCKSCREEN_CLOCK_SELECTION, 0, UserHandle.USER_CURRENT) == 9;
+            int mTextClockAlign = Settings.System.getIntForUser(resolver,
+                    Settings.System.LOCKSCREEN_TEXT_CLOCK_ALIGN, 0, UserHandle.USER_CURRENT);
 
-            // If text style clock, align the textView to start else keep it center.
+            final int paddingPixel = (int) mContext.getResources().getDimension(R.dimen.custom_clock_left_padding);
             if (mClockSelection) {
-                mOwnerInfo.setPaddingRelative((int) mContext.getResources()
-                    .getDimension(R.dimen.custom_clock_left_padding) + 8, 0, 0, 0);
-                mOwnerInfo.setGravity(Gravity.START);
-            } else {
+                if (mTextClockAlign == 0) {
+                    mOwnerInfo.setPaddingRelative(paddingPixel + 8, 0, 0, 0);
+                    mOwnerInfo.setGravity(Gravity.START);
+                } else if (mTextClockAlign == 1) {
+                    mOwnerInfo.setPaddingRelative(0, 0, 0, 0);
+                    mOwnerInfo.setGravity(Gravity.CENTER);
+                } else { // mTextClockAlign == 2
+                    mOwnerInfo.setPaddingRelative(0, 0, paddingPixel + 8, 0);
+                    mOwnerInfo.setGravity(Gravity.END);
+                }
+            } else { // center align owner information for other clock styles
                 mOwnerInfo.setPaddingRelative(0, 0, 0, 0);
                 mOwnerInfo.setGravity(Gravity.CENTER);
             }
